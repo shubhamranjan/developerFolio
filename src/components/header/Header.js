@@ -1,13 +1,11 @@
 import React from "react";
+import Headroom from "react-headroom";
 import "./Header.css";
-import {Fade} from "react-reveal";
-import {greeting, workExperiences} from "../../portfolio";
+import {greeting, educationInfo, workExperiences} from "../../portfolio";
 
 function Header() {
-  const exp = workExperiences.viewExperiences;
   return (
-    <Fade top duration={1000} distance="20px">
-    <div>
+    <Headroom>
       <header className="header">
         <a href="" className="logo">
           <span className="grey-color"> &lt;</span>
@@ -22,7 +20,12 @@ function Header() {
           <li>
             <a href="#skills">Skills</a>
           </li>
-          { exp === true &&
+          {educationInfo.viewEducation &&
+            <li>
+              <a href="#education">Education</a>
+            </li>
+          }
+          {workExperiences.viewExperiences &&
             <li>
               <a href="#experience">Work Experiences</a>
             </li>
@@ -47,8 +50,7 @@ function Header() {
           </li>
         </ul>
       </header>
-    </div>
-    </Fade>
+    </Headroom>
   );
 }
 export default Header;

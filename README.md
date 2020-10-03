@@ -1,26 +1,27 @@
-# Software Developer Folio ⚡️ [![GitHub](https://img.shields.io/github/license/saadpasta/developer-portfolio?color=blue)](https://github.com/saadpasta/developerFolio/blob/master/LICENSE) [![GitHub stars](https://img.shields.io/github/stars/saadpasta/developerFolio)](https://github.com/saadpasta/developerFolio/stargazers)  [![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors) 
+# Software Developer Folio ⚡️ [![GitHub](https://img.shields.io/github/license/saadpasta/developer-portfolio?color=blue)](https://github.com/saadpasta/developerFolio/blob/master/LICENSE) [![GitHub stars](https://img.shields.io/github/stars/saadpasta/developerFolio)](https://github.com/saadpasta/developerFolio/stargazers)  [![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors)
 
 ## A clean, beautiful and responsive portfolio template for Developers!
 
 
-<p align="center"> 
+<p align="center">
   <kbd>
 <img src="https://user-images.githubusercontent.com/49693820/81296489-999abf00-908f-11ea-9442-75e8f0ecf65d.gif"></img>
   </kbd>
 </p>
 
 
-Just change `src/portfolio.js` to get your personal portfolio . Feel free to use it as-is or customize it as much as you want.
+Just change `src/portfolio.js` to get your personal portfolio. Feel free to use it as-is or customize it as much as you want.
 
 But if you want to **contribute** and make this much better for other developer have a look at [Issues](https://github.com/saadpasta/developerFolio/issues).
 
 
-If you created something awesome and want to contribute then feel free to open Please don't hesitate to open an [pull request](https://github.com/saadpasta/developerFolio/pulls).
+If you created something awesome and want to contribute then feel free to open an [pull request](https://github.com/saadpasta/developerFolio/pulls).
 
 
-## Sections 
+## Sections
 ✔️ Summary and About me\
 ✔️ Skills\
+✔️ Education\
 ✔️ Work Experience\
 ✔️ Open Source Projects Connected with Github\
 ✔️ Big Projects\
@@ -32,7 +33,7 @@ If you created something awesome and want to contribute then feel free to open P
 ✔️ Twitter Timeline\
 ✔️ Github Profile
 
-To view a live example, **[click here](https://developerfolio.js.org/)**
+To view a live example, **[click here](https://developerfolio.js.org/)**.
 
 
 ## Getting Started 🚀
@@ -46,7 +47,7 @@ node@v10.16.0 or higher
 npm@6.9.0 or higher
 git@2.17.1 or higher
 ```
-### Docker Commands 
+### Docker Commands
 
 ```
 1) BUILD IMAGE : docker build -t developerfolio:latest .
@@ -71,11 +72,14 @@ $ npm install
 #Start's development server
 $ npm start
 ```
+
 ## Github Setup For Open Source Projects
 
-Generate a Github personal access token using these [Instructions](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) `Make sure you don't select any scope just generate a simple token`
+Generate a Github personal access token following these [instructions](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) (make sure you don't select any scope just generate a simple token).
 
-1. Create a file called .env in the root directory of your project.
+1. Create a file called .env in the root directory of your project, check the base file
+
+Note: Instead of creating a .env file, you can just run this command "cp env.example .env" inside the root directory
 
 ```bash
 - DeveloperFolio
@@ -83,6 +87,7 @@ Generate a Github personal access token using these [Instructions](https://help.
   - public
   - src
   - .env         <-- create it here
+  - env.example  <-- this is the base file
   - .gitignore
   - package-lock.json
   - package.json
@@ -92,13 +97,17 @@ Generate a Github personal access token using these [Instructions](https://help.
 
 ```javascript
  // .env
-
   REACT_APP_GITHUB_TOKEN = "YOUR GITHUB TOKEN HERE"
-
-};
 ```
 
 Set `showGithubProfile` to true or false to show Contact Profile using Github, defaults to false.
+
+Note: Open Source Projects section only show pinned items of your Github.
+If you are seeing something as shown below, follow these [instructions](https://docs.github.com/en/enterprise/2.13/user/articles/pinning-items-to-your-profile).
+
+![ERROR](https://i.imgur.com/Hj6mu1K.png)
+
+If the above solution still doesn't work, visit the [wiki page](https://github.com/saadpasta/developerFolio/wiki/Github-Setup-For-Open-Source-Projects).
 
 ## Change and customize every section according to your need.
 
@@ -128,9 +137,9 @@ const skillsSection = { .... }
 
 const techStack = { .... }
 
-const workExperience = { .... } 
+const workExperience = { .... }
 
-const openSource = { .... } 
+const openSource = { .... }
 
 const bigProjects = { .... }
 
@@ -158,17 +167,21 @@ const twitterDetails = {
 ```
 Note: Don't use `@` symbol when adding username.
 
-## Deployment 📦 
+## Deployment 📦
 When you are done with the setup, you should host your website online.
 We highly recommend to read through the [Deploying on Github Pages](https://create-react-app.dev/docs/deployment/#github-pages) docs for React.
+
+#### Configuring GitHub Actions
+- Using the Personal Access Token you placed in the `.env` file earlier create a [repository secret](https://docs.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets#creating-encrypted-secrets-for-a-repository) called `OPEN_SOURCE_TOKEN` where the value matches the token value from the `.env` file in your local workspace.
+- When you are done with the configuration, we highly recommend to read through the [Github Actions Configuring a workflow](https://docs.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow) docs.
 
 #### Deploying to Github Pages
 
 This section guides you to deploy your portfolio on Github pages.
 
-- Navigate to `package.json` and enter your domain name instead of `https://developerfolio.js.org/` in `homepage` variable. For example, if you want your site to be `https://<your-username>.github.io/developerFolio`, add the same to the homepage section of `package.json`. 
+- Navigate to `package.json` and enter your domain name instead of `https://developerfolio.js.org/` in `homepage` variable. For example, if you want your site to be `https://<your-username>.github.io/developerFolio`, add the same to the homepage section of `package.json`.
 
-- In short you can also add `/devloperFolio` to `package.json` as both are exactly same. Upon doing so, you tell `create-react-app` to add the path assets accordingly. 
+- In short you can also add `/devloperFolio` to `package.json` as both are exactly same. Upon doing so, you tell `create-react-app` to add the path assets accordingly.
 
 - Optionally, configure the domain. You can configure a custom domain with GitHub Pages by adding a `CNAME` file to the `public/` folder.
 
@@ -186,22 +199,20 @@ For more information, read [hosting on Netlify](https://create-react-app.dev/doc
 ## Technologies used 🛠️
 
 - [React](https://reactjs.org/)
-- [graphql](https://graphql.org/) 
-- [apollo-boost](https://www.apollographql.com/docs/react/get-started/) 
+- [graphql](https://graphql.org/)
+- [apollo-boost](https://www.apollographql.com/docs/react/get-started/)
 - [react-twitter-embed](https://github.com/saurabhnemade/react-twitter-embed)
 - [react-easy-emoji](https://github.com/appfigures/react-easy-emoji)
+- [react-headroom](https://github.com/KyleAMathews/react-headroom)
 - [color-thief](https://github.com/lokesh/color-thief)
 
 ## Illustrations
 - [UnDraw](https://undraw.co/illustrations)
 
-## License 📄
-
-This project is licensed under the GPL-3.0 License - see the [LICENSE](./LICENSE) file for details
 
 
 
-## For the Future 
+## For the Future
 If you can help us with these. Please don't hesitate to open a [pull request](https://github.com/saadpasta/developerFolio/pulls).
 
 - Connect with LinkedIn to get Summary, Skills, Education and Experience
@@ -217,7 +228,7 @@ If you can help us with these. Please don't hesitate to open a [pull request](ht
 <table>
   <tr>
     <td align="center"><a href="http://saadpasta.github.io"><img src="https://avatars2.githubusercontent.com/u/23307811?v=4" width="100px;" alt=""/><br /><sub><b>Saad Pasta</b></sub></a></td>
-    <td align="center"><a href="https://github.com/kartik918"><img src="https://avatars1.githubusercontent.com/u/48270786?v=4" width="100px;" alt=""/><br /><sub><b>Kartik Choudhary</b></sub></a></td>
+    <td align="center"><a href="https://github.com/kartikcho"><img src="https://avatars1.githubusercontent.com/u/48270786?v=4" width="100px;" alt=""/><br /><sub><b>Kartik Choudhary</b></sub></a></td>
     <td align="center"><a href="https://naveen.syrusdark.website"><img src="https://avatars1.githubusercontent.com/u/49693820?v=4" width="100px;" alt=""/><br /><sub><b>Naveen M K</b></sub></a></td>
   </tr>
 </table>
@@ -255,6 +266,19 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/AmnaEjaz"><img src="https://avatars3.githubusercontent.com/u/14257959?v=4" width="100px;" alt=""/><br /><sub><b>Amna Ejaz</b></sub></a><br /><a href="https://github.com/saadpasta/developerFolio/commits?author=AmnaEjaz" title="Code">💻</a> <a href="#ideas-AmnaEjaz" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/parasnagpal"><img src="https://avatars0.githubusercontent.com/u/39419139?v=4" width="100px;" alt=""/><br /><sub><b>Paras Nagpal</b></sub></a><br /><a href="https://github.com/saadpasta/developerFolio/commits?author=parasnagpal" title="Code">💻</a></td>
     <td align="center"><a href="https://sourcerer.io/sparsh-99"><img src="https://avatars0.githubusercontent.com/u/56729873?v=4" width="100px;" alt=""/><br /><sub><b>Sparsh Garg</b></sub></a><br /><a href="https://github.com/saadpasta/developerFolio/commits?author=sparsh-99" title="Code">💻</a></td>
+    <td align="center"><a href="http://aashutosh.dev"><img src="https://avatars2.githubusercontent.com/u/21199234?v=4" width="100px;" alt=""/><br /><sub><b>Aashutosh Rathi</b></sub></a><br /><a href="https://github.com/saadpasta/developerFolio/commits?author=aashutoshrathi" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://abhishekashyap.studio/"><img src="https://avatars3.githubusercontent.com/u/29458374?v=4" width="100px;" alt=""/><br /><sub><b>Abhishek Kashyap</b></sub></a><br /><a href="https://github.com/saadpasta/developerFolio/issues?q=author%3Aabhishekashyap" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/lcsvcn"><img src="https://avatars1.githubusercontent.com/u/6011385?v=4" width="100px;" alt=""/><br /><sub><b>Lucas V C Nicolau</b></sub></a><br /><a href="https://github.com/saadpasta/developerFolio/commits?author=lcsvcn" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://bradleycherrin.com"><img src="https://avatars0.githubusercontent.com/u/5648785?v=4" width="100px;" alt=""/><br /><sub><b>Bradley C. Herrin</b></sub></a><br /><a href="https://github.com/saadpasta/developerFolio/commits?author=bradleycherrin" title="Documentation">📖</a> <a href="#ideas-bradleycherrin" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="http://www.zekinahlecaros.com"><img src="https://avatars0.githubusercontent.com/u/43392346?v=4" width="100px;" alt=""/><br /><sub><b>Zekinah Lecaros</b></sub></a><br /><a href="https://github.com/saadpasta/developerFolio/commits?author=zekinah" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/vandana1499"><img src="https://avatars2.githubusercontent.com/u/29394600?v=4" width="100px;" alt=""/><br /><sub><b>unbeat</b></sub></a><br /><a href="https://github.com/saadpasta/developerFolio/commits?author=vandana1499" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/lARSHADl"><img src="https://avatars3.githubusercontent.com/u/45604332?v=4" width="100px;" alt=""/><br /><sub><b>Arshad Ahmed</b></sub></a><br /><a href="https://github.com/saadpasta/developerFolio/commits?author=lARSHADl" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://xiaohuiliu.me"><img src="https://avatars1.githubusercontent.com/u/33507446?v=4" width="100px;" alt=""/><br /><sub><b>Xiaohui Liu</b></sub></a><br /><a href="https://github.com/saadpasta/developerFolio/commits?author=Ergouzii" title="Documentation">📖</a> <a href="https://github.com/saadpasta/developerFolio/commits?author=Ergouzii" title="Code">💻</a> <a href="#design-Ergouzii" title="Design">🎨</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://seungyeon-lee.github.io/"><img src="https://avatars1.githubusercontent.com/u/26589915?v=4" width="100px;" alt=""/><br /><sub><b>Seungyeon-Lee</b></sub></a><br /><a href="https://github.com/saadpasta/developerFolio/commits?author=Seungyeon-Lee" title="Code">💻</a></td>
   </tr>
 </table>
 

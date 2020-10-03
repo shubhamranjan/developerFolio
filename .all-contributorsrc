@@ -190,6 +190,90 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "aashutoshrathi",
+      "name": "Aashutosh Rathi",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/21199234?v=4",
+      "profile": "http://aashutosh.dev",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "abhishekashyap",
+      "name": "Abhishek Kashyap",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/29458374?v=4",
+      "profile": "https://abhishekashyap.studio/",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "lcsvcn",
+      "name": "Lucas V C Nicolau",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/6011385?v=4",
+      "profile": "https://github.com/lcsvcn",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "bradleycherrin",
+      "name": "Bradley C. Herrin",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/5648785?v=4",
+      "profile": "http://bradleycherrin.com",
+      "contributions": [
+        "doc",
+        "ideas"
+      ]
+    },
+    {
+      "login": "zekinah",
+      "name": "Zekinah Lecaros",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/43392346?v=4",
+      "profile": "http://www.zekinahlecaros.com",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "vandana1499",
+      "name": "unbeat",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/29394600?v=4",
+      "profile": "https://github.com/vandana1499",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "lARSHADl",
+      "name": "Arshad Ahmed",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/45604332?v=4",
+      "profile": "https://github.com/lARSHADl",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Ergouzii",
+      "name": "Xiaohui Liu",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/33507446?v=4",
+      "profile": "http://xiaohuiliu.me",
+      "contributions": [
+        "doc",
+        "code",
+        "design"
+      ]
+    },
+    {
+      "login": "Seungyeon-Lee",
+      "name": "Seungyeon-Lee",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/26589915?v=4",
+      "profile": "https://seungyeon-lee.github.io/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
